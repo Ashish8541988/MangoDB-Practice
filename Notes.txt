@@ -1,0 +1,6 @@
+#MongodB:-
+->It is a No-SQL Document Based Database
+#Working of MongodB
+Schema - Define the structure
+    Schema-Model
+    using model we do crud operations

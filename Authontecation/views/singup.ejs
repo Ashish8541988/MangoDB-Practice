@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup</title>
+</head>
+<style>
+    .abc{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        background-color: black;
+        height: 100vh;
+        color: aliceblue;
+        
+    }
+    form{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+        gap: 1rem;
+       
+    }
+    input{
+        outline: none;
+        border: none;
+        height: 20px;
+        padding: 10px;
+    }
+    button{
+    background-color: chartreuse;
+    border: none;
+    outline: 1px solid wheat ;
+    color: aliceblue;
+    padding: 12px;
+    width: 100px;
+    align-self: center;
+}
+</style>
+<body>
+    <div class="abc">
+    <h1>SingUP</h1>
+    <form method="post" action="/user">
+        <label>Full Name</label>
+        <input type="text" placeholder="Enter your name", name="name">
+        <label>email</label>
+        <input type="text" placeholder="Enter your email", name="email">
+        <label>password</label>
+        <input type="text" placeholder="Enter your password", name="password">
+        <button type="submit">Submit</button>
+    </form>
+</div>
+</body>
+</html>

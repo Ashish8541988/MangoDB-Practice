@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Server Side Rendring</title>
+</head>
+<style>
+body{
+    padding: 0;
+    margin: 0;
+    background-color: rgb(3, 12, 29);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.url_short{
+   
+    
+    padding: 0;
+    margin: 0;
+    color: aliceblue;
+}
+button{
+    background-color: chartreuse;
+    border: none;
+    outline: 1px solid wheat ;
+    color: aliceblue;
+    padding: 12px;
+    width: 100px;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    
+}
+label{
+    font-weight: bold;
+}
+input{
+    outline: none;
+    padding: 10px;
+}
+</style>
+<body>
+    <div class="url_short">
+        <form method="post" action="/url">
+            <h1>URL SHORTNER</h1>
+            <label>Enter Your URL</label>
+            <input placeholder="e.g. http://www.google.com", name="url", type="text"/>
+            <button type="submit">Genrate</button>
+        </form>
+        
+    </div>
+<div class="url_short">
+    <% if(locals.urls){ %>
+        <h1>ShortUrl data</h1>
+    <table>
+        <thead>
+            <th>S.No</th>
+            <th>ShortId</th>
+            <th>RedirectUrl</th>
+            <th>Click</th>
+        </thead>
+       <tbody>
+        <% urls.forEach((url,index) => {
+            %>
+            <tr>
+            <td><%= index+1  %></td>
+            <td><%= url.shortId  %></td>
+            <td><%= url.redirectURL %></td>
+            <td><%= url.visitHistory %></th>
+            </tr>
+            <%
+        }); %>
+       </tbody>
+    </table>
+    <% }%>
+   
+</div>
+</body>
+</html>

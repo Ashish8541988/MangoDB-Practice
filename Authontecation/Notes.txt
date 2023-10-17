@@ -1,0 +1,3 @@
+Authentication patterns type:
+1:- State_full:- which maintains state or data at server side (smpliy means which has data at server side . )
+2: State_less:- which has no state.
